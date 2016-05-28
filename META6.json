@@ -9,5 +9,5 @@
 	"provides" : {
 		"Movieinfo" : "lib/Movieinfo.pm6"
 	},
-  "source" : "git://github.com/palapitta/Movieinfo"
+        "source-url" : "git://github.com/palapitta/Movieinfo"
 }
