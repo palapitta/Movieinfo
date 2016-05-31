@@ -7,7 +7,8 @@ my $result;
 my $x;
 
 multi method getinfo($name) {
-   my $na = $name;
+   my $n = $name;
+   my $na = trim($n);
    $na ~~ tr/" "/"+"/;
   my $t = "http://www.omdbapi.com/?t=$na";
     $result = Net::HTTP::GET($t);
@@ -15,7 +16,8 @@ multi method getinfo($name) {
 }
 
 multi method getinfo($name, $year) {
-   my $na = $name;
+   my $n = $name;
+   my $na = trim($n);
   $na ~~ tr/" "/"+"/;
   my $t = "http://www.omdbapi.com/?t=$na&y=$year";
     $result = Net::HTTP::GET($t);

@@ -6,7 +6,7 @@ Get Movie info from omdb
 use Movieinfo;
 my $m = Movieinfo.new();
 
-$m.getinfo("Dead Man","1995"); # year is optional
+$m.getinfo(" Dead Man","1995"); # year is optional
 say $m.actors();
 shell("wget -q $m.posterurl");
 
